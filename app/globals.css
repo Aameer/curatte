@@ -56,6 +56,25 @@
     animation: gradient 3s ease infinite;
   }
   
+  .currate-text {
+    background: linear-gradient(
+      45deg,
+      #8b5cf6,
+      #a855f7,
+      #c084fc,
+      #06b6d4,
+      #0891b2,
+      #6366f1,
+      #8b5cf6
+    );
+    background-size: 400% 400%;
+    animation: gradient 4s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.5));
+  }
+  
   .cyber-grid {
     background-image: 
       linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),

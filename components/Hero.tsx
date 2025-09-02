@@ -108,7 +108,7 @@ export default function Hero() {
               className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight"
             >
               <span className="block">
-                <span className="inline-block holographic bg-clip-text text-transparent">
+                <span className="inline-block currate-text">
                   CURRATE
                 </span>
               </span>

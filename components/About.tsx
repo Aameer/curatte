@@ -12,28 +12,16 @@ const stats = [
 
 const timeline = [
   {
-    year: '2023',
+    year: 'Sep 2025',
     title: 'Foundation & Vision',
     description: 'Founded in Texas with a mission to revolutionize AI-powered curation',
     icon: '🌟',
   },
   {
-    year: '2024',
+    year: 'Q4 2025',
     title: 'Geter.ai Launch',
     description: 'Launched our flagship AI platform with advanced natural language processing',
     icon: '🚀',
-  },
-  {
-    year: '2024',
-    title: 'Series A Funding',
-    description: 'Secured $15M Series A led by prominent Silicon Valley investors',
-    icon: '💎',
-  },
-  {
-    year: '2025',
-    title: 'Global Expansion',
-    description: 'Expanding operations while maintaining our core presence in the US',
-    icon: '🌍',
   },
 ]
 

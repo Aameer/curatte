@@ -20,7 +20,7 @@ const timeline = [
   {
     year: 'Q4 2025',
     title: 'Geter.ai Launch',
-    description: 'Launched our flagship AI platform with advanced natural language processing',
+    description: 'Launching our flagship AI platform with multimodal capabilities',
     icon: '🚀',
   },
 ]

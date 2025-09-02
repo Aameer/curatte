@@ -5,6 +5,13 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  safelist: [
+    'currate-text',
+    'text-gradient',
+    'bg-glass',
+    'animate-gradient',
+    'holographic'
+  ],
   theme: {
     extend: {
       animation: {

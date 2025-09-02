@@ -5,6 +5,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://currate.vercel.app'),
   title: 'Currate - AI-Powered Curation & Aggregation Platform',
   description: 'Experience the future of intelligent curation with Geter.ai and advanced coupon aggregation. Transforming how businesses discover and leverage opportunities.',
   keywords: 'AI, curation, aggregation, Geter.ai, coupons, intelligent automation, business solutions',
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Currate - AI-Powered Curation & Aggregation Platform',
     description: 'Experience the future of intelligent curation with Geter.ai and advanced coupon aggregation.',
-    url: 'https://currate.ai',
+    url: 'https://currate.vercel.app',
     siteName: 'Currate',
     images: [
       {

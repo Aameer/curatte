@@ -8,9 +8,17 @@ module.exports = {
   safelist: [
     'currate-text',
     'text-gradient',
+    'text-gradient-gold', 
     'bg-glass',
+    'bg-glass-darker',
+    'cyber-grid',
     'animate-gradient',
-    'holographic'
+    'holographic',
+    'shimmer',
+    'aurora',
+    'glass-morphism',
+    'neon-glow',
+    'chrome-text'
   ],
   theme: {
     extend: {

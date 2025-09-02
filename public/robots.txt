@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://currate.vercel.app/sitemap.xml

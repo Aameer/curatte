@@ -6,46 +6,46 @@ import { motion, useInView } from 'framer-motion'
 const features = [
   {
     title: 'Geter.ai Engine',
-    description: 'Advanced AI algorithms that understand context, predict trends, and deliver personalized content curation at scale.',
+    description: 'Multimodal AI agents for intelligent content curation.',
     icon: '🧠',
     gradient: 'from-violet-500 to-purple-600',
-    details: ['Natural Language Processing', 'Predictive Analytics', 'Real-time Learning'],
+    details: ['Multimodal Search', 'AI Agents', 'Real-time'],
     highlight: true,
   },
   {
-    title: 'Smart Coupon Aggregation',
-    description: 'Automatically discover, validate, and organize thousands of coupons from across the web with intelligent categorization.',
+    title: 'Smart Aggregation',
+    description: 'Validate and organize coupons intelligently.',
     icon: '🎯',
     gradient: 'from-cyan-500 to-blue-600',
     details: ['Auto-validation', 'Dynamic Pricing', 'Fraud Detection'],
   },
   {
-    title: 'Intelligent Data Pipeline',
-    description: 'Process millions of data points in real-time with our distributed computing infrastructure.',
+    title: 'Data Pipeline',
+    description: 'Process millions of data points instantly.',
     icon: '⚡',
     gradient: 'from-amber-500 to-orange-600',
-    details: ['Real-time Processing', 'Scalable Architecture', 'Edge Computing'],
+    details: ['Real-time', 'Scalable', 'Edge Computing'],
   },
   {
-    title: 'API-First Platform',
-    description: 'Seamlessly integrate our curation capabilities into your existing workflow with our comprehensive API suite.',
+    title: 'API Platform',
+    description: 'Seamless integration with your workflow.',
     icon: '🔗',
     gradient: 'from-emerald-500 to-green-600',
-    details: ['RESTful APIs', 'WebSocket Support', 'SDK Libraries'],
+    details: ['RESTful', 'WebSocket', 'SDKs'],
   },
   {
-    title: 'Analytics Dashboard',
-    description: 'Gain deep insights into user behavior, content performance, and ROI with advanced analytics.',
+    title: 'Analytics',
+    description: 'Deep insights and performance metrics.',
     icon: '📊',
     gradient: 'from-pink-500 to-rose-600',
-    details: ['Custom Reports', 'Predictive Metrics', 'A/B Testing'],
+    details: ['Custom Reports', 'Predictive', 'A/B Testing'],
   },
   {
-    title: 'Enterprise Security',
-    description: 'Bank-grade encryption and compliance with SOC 2, GDPR, and CCPA standards.',
+    title: 'Security',
+    description: 'Enterprise-grade protection and compliance.',
     icon: '🔒',
     gradient: 'from-slate-500 to-gray-600',
-    details: ['End-to-end Encryption', 'Zero-trust Architecture', 'Audit Logs'],
+    details: ['Encryption', 'Zero-trust', 'Audit Logs'],
   },
 ]
 
@@ -54,11 +54,11 @@ export default function Features() {
   const isInView = useInView(containerRef, { once: true, amount: 0.2 })
   
   return (
-    <section ref={containerRef} className="relative py-32 overflow-hidden" id="features">
+    <section ref={containerRef} className="relative py-40 overflow-hidden" id="features">
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-violet-900/10 to-black" />
-        <div className="absolute inset-0 aurora opacity-30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-violet-900/20 to-black" />
+        <div className="absolute inset-0 aurora opacity-40" />
       </div>
       
       <div className="relative z-10 container mx-auto px-6">
@@ -81,12 +81,11 @@ export default function Features() {
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
             <span className="text-gradient">Cutting-Edge</span>
             <br />
-            <span className="chrome-text">Technology Stack</span>
+            <span className="text-white">Technology Stack</span>
           </h2>
           
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Built with the latest AI advancements and cloud-native architecture to deliver 
-            unparalleled performance and reliability.
+          <p className="text-lg text-gray-500 max-w-2xl mx-auto">
+            Cloud-native AI architecture. Unparalleled performance.
           </p>
         </motion.div>
         
@@ -102,7 +101,7 @@ export default function Features() {
               className={`group relative ${feature.highlight ? 'md:col-span-2 lg:col-span-1' : ''}`}
             >
               {/* Card Container */}
-              <div className="relative h-full p-8 rounded-2xl overflow-hidden">
+              <div className="relative h-full p-6 rounded-2xl overflow-hidden">
                 {/* Background Gradient */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
                 
@@ -133,63 +132,34 @@ export default function Features() {
                   </div>
                   
                   {/* Title & Description */}
-                  <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-gradient transition-all duration-300">
+                  <h3 className="text-xl font-bold mb-2 text-white group-hover:text-gradient transition-all duration-300">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-400 mb-6 leading-relaxed">
+                  <p className="text-gray-400 mb-4 text-sm">
                     {feature.description}
                   </p>
                   
                   {/* Feature Details */}
-                  <div className="space-y-2">
+                  <div className="flex flex-wrap gap-2">
                     {feature.details.map((detail, idx) => (
-                      <motion.div
+                      <motion.span
                         key={idx}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={isInView ? { opacity: 1, x: 0 } : {}}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={isInView ? { opacity: 1, scale: 1 } : {}}
                         transition={{ delay: index * 0.1 + idx * 0.05 }}
-                        className="flex items-center gap-2 text-sm text-gray-500"
+                        className="px-2 py-1 text-xs text-cyan-400 bg-cyan-500/10 rounded-full border border-cyan-500/20"
                       >
-                        <div className="w-1.5 h-1.5 bg-gradient-to-r from-violet-400 to-cyan-400 rounded-full" />
-                        <span>{detail}</span>
-                      </motion.div>
+                        {detail}
+                      </motion.span>
                     ))}
                   </div>
                   
-                  {/* Learn More Link */}
-                  <motion.div
-                    whileHover={{ x: 5 }}
-                    className="mt-6 inline-flex items-center gap-2 text-violet-400 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  >
-                    <span>Learn more</span>
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </motion.div>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
         
-        {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.8, duration: 0.5 }}
-          className="mt-20 text-center"
-        >
-          <div className="inline-flex flex-col items-center gap-4">
-            <p className="text-gray-400">Ready to transform your business?</p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-to-r from-violet-600 to-cyan-600 rounded-xl font-semibold text-white hover:shadow-2xl hover:shadow-violet-500/25 transition-all duration-300"
-            >
-              Start Free Trial
-            </motion.button>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

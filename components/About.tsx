@@ -4,10 +4,10 @@ import { useRef } from 'react'
 import { motion, useInView, useScroll, useTransform } from 'framer-motion'
 
 const stats = [
-  { value: '500M+', label: 'Data Points Processed', description: 'Daily processing volume' },
-  { value: '99.9%', label: 'Uptime Guarantee', description: 'Enterprise-grade reliability' },
-  { value: '<50ms', label: 'API Response Time', description: 'Lightning-fast performance' },
-  { value: '150+', label: 'Enterprise Clients', description: 'Fortune 500 companies' },
+  { value: '500M+', label: 'Data Points' },
+  { value: '99.9%', label: 'Uptime' },
+  { value: '<50ms', label: 'Response' },
+  { value: '150+', label: 'Enterprises' },
 ]
 
 const timeline = [
@@ -37,17 +37,17 @@ export default function About() {
   const rotate = useTransform(scrollYProgress, [0, 1], [0, 360])
   
   return (
-    <section ref={containerRef} className="relative py-32 overflow-hidden" id="about">
+    <section ref={containerRef} className="relative py-40 overflow-hidden" id="about">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-slate-900/20 to-black" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-slate-900/30 to-black" />
         <motion.div
           style={{ y, rotate }}
-          className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-r from-violet-500/5 to-cyan-500/5 rounded-full blur-3xl"
+          className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-r from-violet-500/10 to-cyan-500/10 rounded-full blur-3xl"
         />
         <motion.div
           style={{ y: useTransform(scrollYProgress, [0, 1], [-50, 50]) }}
-          className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-r from-fuchsia-500/5 to-purple-500/5 rounded-full blur-3xl"
+          className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-r from-fuchsia-500/10 to-purple-500/10 rounded-full blur-3xl"
         />
       </div>
       
@@ -72,12 +72,11 @@ export default function About() {
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
             <span className="text-gradient">Redefining</span>
             <br />
-            <span className="chrome-text">Digital Intelligence</span>
+            <span className="text-white">Digital Intelligence</span>
           </h2>
           
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Born from the innovation hubs of America, we're building the next generation 
-            of AI-powered curation technology that scales globally while staying true to our roots.
+          <p className="text-lg text-gray-500 max-w-2xl mx-auto">
+            Next-gen AI curation. Built in Texas. Scaling globally.
           </p>
         </motion.div>
         
@@ -86,7 +85,7 @@ export default function About() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-24"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-32"
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -96,19 +95,18 @@ export default function About() {
               transition={{ delay: 0.4 + index * 0.1, duration: 0.5 }}
               className="group text-center"
             >
-              <div className="relative p-6 rounded-2xl bg-glass-darker hover:bg-glass transition-all duration-300">
-                <div className="absolute inset-0 bg-gradient-to-br from-violet-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative p-4 rounded-xl bg-glass-darker hover:bg-glass transition-all duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-violet-500/5 to-cyan-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="relative">
                   <motion.div
                     initial={{ scale: 0 }}
                     animate={isInView ? { scale: 1 } : {}}
                     transition={{ delay: 0.5 + index * 0.1, type: "spring" }}
-                    className="text-3xl lg:text-4xl font-bold text-gradient mb-2"
+                    className="text-2xl lg:text-3xl font-bold text-gradient mb-1"
                   >
                     {stat.value}
                   </motion.div>
-                  <div className="text-white font-semibold mb-1">{stat.label}</div>
-                  <div className="text-sm text-gray-400">{stat.description}</div>
+                  <div className="text-sm text-white font-semibold">{stat.label}</div>
                 </div>
               </div>
             </motion.div>
@@ -116,34 +114,25 @@ export default function About() {
         </motion.div>
         
         {/* Company Story */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Story Content */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            <h3 className="text-3xl lg:text-4xl font-bold mb-6">
-              <span className="text-gradient-gold">American Innovation,</span>
-              <br />
-              <span className="text-white">Global Impact</span>
+            <h3 className="text-2xl lg:text-3xl font-bold mb-4">
+              <span className="text-gradient-gold">American Innovation</span>
+              <span className="text-white ml-2">• Global Impact</span>
             </h3>
-            <div className="space-y-4 text-gray-300 text-lg leading-relaxed">
+            <div className="space-y-3 text-gray-400 text-base">
               <p>
-                Founded in the heart of Texas, Currate represents the convergence of 
-                American entrepreneurship and cutting-edge AI technology. Our team of 
-                world-class engineers and data scientists work from our Austin headquarters 
-                to deliver solutions that power businesses across the globe.
+                Texas-based AI innovation powering global businesses with 
+                cutting-edge curation technology.
               </p>
               <p>
-                As a Delaware C-Corporation, we maintain the highest standards of 
-                corporate governance while fostering an innovative culture that attracts 
-                top talent from leading tech companies and research institutions.
-              </p>
-              <p>
-                Our flagship product, <span className="text-violet-400 font-semibold">Geter.ai</span>, 
-                exemplifies our commitment to pushing the boundaries of what's possible 
-                in artificial intelligence and automated curation.
+                <span className="text-violet-400 font-semibold">Geter.ai</span> - 
+                Multimodal search across the web with affiliation support for all major brands.
               </p>
             </div>
             
@@ -200,51 +189,6 @@ export default function About() {
             </div>
           </motion.div>
         </div>
-        
-        {/* Timeline */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.8, duration: 0.8 }}
-        >
-          <h3 className="text-3xl lg:text-4xl font-bold text-center mb-16">
-            <span className="text-gradient">Our Journey</span>
-          </h3>
-          
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-8 lg:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-violet-500 via-cyan-500 to-violet-500 opacity-30" />
-            
-            <div className="space-y-16">
-              {timeline.map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ delay: 1 + index * 0.2, duration: 0.5 }}
-                  className={`relative flex items-center ${
-                    index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                  }`}
-                >
-                  {/* Timeline Node */}
-                  <div className="absolute left-8 lg:left-1/2 w-4 h-4 bg-gradient-to-r from-violet-500 to-cyan-500 rounded-full -translate-x-1/2" />
-                  
-                  {/* Content */}
-                  <div className={`flex-1 ml-16 lg:ml-0 ${index % 2 === 0 ? 'lg:pr-16' : 'lg:pl-16'}`}>
-                    <div className="p-6 rounded-2xl bg-glass-darker hover:bg-glass transition-all duration-300">
-                      <div className="flex items-center gap-3 mb-3">
-                        <span className="text-2xl">{item.icon}</span>
-                        <span className="text-lg font-bold text-violet-400">{item.year}</span>
-                      </div>
-                      <h4 className="text-xl font-semibold text-white mb-2">{item.title}</h4>
-                      <p className="text-gray-400">{item.description}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

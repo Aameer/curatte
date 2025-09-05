@@ -109,7 +109,7 @@ export default function Contact() {
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
             <span className="text-gradient">Let's Build</span>
             <br />
-            <span className="chrome-text">The Future Together</span>
+            <span className="text-white">The Future Together</span>
           </h2>
           
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">

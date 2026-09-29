@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://currate.vercel.app/sitemap.xml
+Sitemap: https://www.curatte.com/sitemap.xml
